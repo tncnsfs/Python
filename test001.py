@@ -44,17 +44,8 @@ xmlStr = '''
 # print(userName.text +","+ userName1.text +","+ userName2.text)
 # 
 # =============================================================================
+for user in tree.findall('./user'):print(user.tag)
 
 
-for user in tree.findall('./user[1]'):print(user.tag)
-for user02 in tree.findall('./user[2]'):print(user.tag)
 
-
-useName01 = user.find('name').text
-useName02 = user02.find('name').text
-
-print("useName01"+","+ useName01)
-print("useName02" +","+  useName02)
-
-print("useName01"+":"+ useName01+","+ "useName02" +":"+  useName02)
 
