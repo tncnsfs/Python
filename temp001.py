@@ -5,7 +5,7 @@ Created on Sat Apr  6 19:47:29 2019
 @author: Administrator
 """
 
-import xml.etree.ElementTree as elemTree
+import xml.etree.ElementTree as elemTree 
 
 tree = elemTree.parse('test002.xml')
 
