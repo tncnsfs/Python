@@ -46,6 +46,60 @@ xmlStr = '''
 # =============================================================================
 for user in tree.findall('./user'):print(user.tag)
 
+############################################################
+
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
+
+
+import sys
+print("python 버전 : {}".format(sys.version))
+
+import pandas as pd
+print("pandas 버전 : {}".format(pd.__version__))
+
+import matplotlib
+print("matplotlib 버전 : {}".format(matplotlib.__version__))
+
+import numpy as np
+print("numpy 버전 : {}".format(np.__version__))
+
+import scipy as sp
+print("scipy 버전 : {}".format(sp.__version__))
+
+import IPython
+print("IPython 버전 : {}".format(IPython.__version__))
+
+import sklearn
+print("sklearn : {}".format(sklearn.__version__))
+
+data=list(range(1,11))
+
+print(data)
+
+# %matplotlib inline
+import matplotlib.pyplot as plt
+plt.plot(data,'r')
+
+############################################################
+
+from openpyxl import load_workbook
+
+# C:\Users\Administrator\Documents\testFile
+
+load_wb = load_workbook("/Users/Administrator/Documents/testFile/전국cctv표준데이터_3.xlsx", data_only=True)
+
+#시트 이름으로 불러오기
+load_ws = load_wb['Sheet1']
+
+print(load_ws['a1'].value)
+
+print(load_ws.cell(1,2).value)
 
 
 
